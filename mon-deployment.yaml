@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: laravel-web
-        image: sereymony01/exam-laravel:latest
+        image: mony0112/exam-laravel:latest
         ports:
         - containerPort: 8080
         - containerPort: 22
