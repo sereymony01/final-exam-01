@@ -35,8 +35,8 @@ RUN mkdir -p /var/www/html && \
     chmod -R 755 /var/www/html
 
 # Copy configs if available
-COPY default.conf /etc/nginx/conf.d/default.conf
-COPY www.conf /etc/php/8.2/fpm/pool.d/www.conf
+COPY ./default.conf /etc/nginx/conf.d/default.conf
+COPY ./www.conf /etc/php/8.2/fpm/pool.d/www.conf
 
 # Start services
 CMD service ssh start && service php8.2-fpm start && nginx -g 'daemon off;'
